@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Instagram, EyeIcon } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
