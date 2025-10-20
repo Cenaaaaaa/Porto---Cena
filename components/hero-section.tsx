@@ -21,6 +21,10 @@ export function HeroSection() {
     document.body.removeChild(link)
   }
 
+  const handlePreview = () => {
+    window.open("https://drive.google.com/drive/folders/1onTgv-qQXuIo3wgkxaSL2NpYhK8tcHU2?usp=sharing", "_blank")
+  }
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -46,6 +50,10 @@ export function HeroSection() {
               <Button size="lg" onClick={handleDownload} className="bg-primary hover:bg-primary/90">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
+              </Button>
+              <Button size="lg" onClick={handlePreview} className="bg-primary hover:bg-primary/90">
+                <EyeIcon className="mr-2 h-4 w-4" />
+                Grade Transcripts
               </Button>
             </div>
 
