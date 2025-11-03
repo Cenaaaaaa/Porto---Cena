@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Mail, Download, Instagram } from "lucide-react"
+import { Github, Linkedin, Mail, Download, Instagram, EyeIcon } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -19,6 +19,10 @@ export function HeroSection() {
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
+  }
+
+  const handlePreview = () => {
+    window.open("https://drive.google.com/drive/folders/1onTgv-qQXuIo3wgkxaSL2NpYhK8tcHU2?usp=sharing", "_blank")
   }
 
   return (
@@ -46,6 +50,10 @@ export function HeroSection() {
               <Button size="lg" onClick={handleDownload} className="bg-primary hover:bg-primary/90">
                 <Download className="mr-2 h-4 w-4" />
                 Download CV
+              </Button>
+              <Button size="lg" onClick={handlePreview} className="bg-primary hover:bg-primary/90">
+                <EyeIcon className="mr-2 h-4 w-4" />
+                Grade Transcripts
               </Button>
             </div>
 

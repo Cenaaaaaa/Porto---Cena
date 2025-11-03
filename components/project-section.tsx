@@ -11,22 +11,22 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { ExternalLink, Github, Users, Briefcase } from "lucide-react"
+import { ExternalLink, Github, Users, Briefcase , Play} from "lucide-react"
 import Image from "next/image"
 
 const projects = [
   {
-    title: "CAteriNgz",
-    description:
-      "Cateringz is a web-based restaurant platform that offers a variety of food, featuring a complete menu, special promotions, and customer testimonials to enhance trust and user experience.",
+    title: "Workly",
+    description: "Workly is a job search web platform designed to connect companies with job seekers, with a focus on opportunities for senior high school graduates.",
     fullDescription:
-      "Cateringz is a web-based restaurant platform that I created during my second semester. It provides a wide variety of food, a complete menu, special promotional dishes, and customer testimonials to increase trust and user experience. The project was built using HTML for structure, CSS for styling, and JavaScript for interactivity",
-    role: "Developer",
-    contributors: ["Jonathan Christian Souw"],
-    image: "/cateringzz.png",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    // liveUrl: "#",
-    githubUrl: "https://github.com/Cenaaaaaa/HCI---CAteriNgz.git",
+      "Workly is a job search platform I developed in my fourth semester using Django for the backend and HTML, CSS, and JavaScript for the frontend. It aims to bridge the gap between companies and job seekers, with a special focus on creating accessible opportunities for senior high school graduates. For job seekers, Workly provides features such as job search, CV posting, and access to career articles and tips. For companies, the platform enables posting job vacancies and advertisements to reach potential candidates effectively. This project demonstrates my ability to combine web technologies and practical design to address real-world employment challenges.",
+    role: "Frontend Developer & Backend Developer",
+    contributors: ["Jonathan Christian Souw","Richard Chrysander","Dava Rabbani Adrian Widyatmoko", "Fadhil Aziz Rizky", "Samuel"],
+    image: "/Workly.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Django"],
+    liveUrl: "https://drive.google.com/drive/folders/1ODS81OhnKd_KII52A-It39m38OxmU7XU?usp=sharing",
+    githubUrl: "https://github.com/Cenaaaaaa/SE---Workly.git",
+    project_detail : "https://www.canva.com/design/DAG3oR9B1zs/FJFicfZ8uTZ6y1SaXhybLA/edit?utm_content=DAG3oR9B1zs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
   },
   {
     title: "Tense Sense",
@@ -36,22 +36,11 @@ const projects = [
       "Tense Sense is a web-based project I developed in my third semester using Flask for the backend and HTML, CSS, and JavaScript for the frontend. The system integrates natural language processing and machine learning to analyze user-input sentences and classify them into grammatical tense categories such as present, past, or future. This project highlights the combination of AI concepts with web technologies, resulting in an interactive platform that supports grammar understanding and language learning in an accessible way.",
     role: "Frontend Developer & Machine Learning Developer",
     contributors: ["Jonathan Christian Souw","Bren Alden","Hernando Tan"],
-    image: "/tensensee.png",
-    technologies: ["Flask", "HTML", "CSS", "JavaScript", "Python"],
-    // liveUrl: "#",
+    image: "/TenseSense.png",
+    technologies: ["Flask","React", "Python", "JavaScript", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://tensesense.vercel.app/",
     githubUrl: "https://github.com/Cenaaaaaa/AI---Tense-Sense.git",
-  },
-  {
-    title: "Workly",
-    description: "Workly is a job search web platform designed to connect companies with job seekers, with a focus on opportunities for senior high school graduates.",
-    fullDescription:
-      "Workly is a job search platform I developed in my fourth semester using Django for the backend and HTML, CSS, and JavaScript for the frontend. It aims to bridge the gap between companies and job seekers, with a special focus on creating accessible opportunities for senior high school graduates. For job seekers, Workly provides features such as job search, CV posting, and access to career articles and tips. For companies, the platform enables posting job vacancies and advertisements to reach potential candidates effectively. This project demonstrates my ability to combine web technologies and practical design to address real-world employment challenges.",
-    role: "Frontend Developer & Backend Developer",
-    contributors: ["Jonathan Christian Souw","Richard Chrysander","Dava Rabbani Adrian Widyatmoko", "Fadhil Aziz Rizky", "Samuel"],
-    image: "/worklys.png",
-    technologies: ["HTML", "CSS", "JavaScript", "Django"],
-    // liveUrl: "#",
-    githubUrl: "https://github.com/Cenaaaaaa/SE---Workly.git",
+    project_detail : "https://www.canva.com/design/DAG3ocGHjZ0/xuU1kZaRLMnxOHxLC6qcpQ/edit?utm_content=DAG3ocGHjZ0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
   },
   {
     title: "Football Match Predictor",
@@ -60,10 +49,11 @@ const projects = [
       "Developed in my fourth semester, Football Match Prediction combines web development and machine learning to provide predictions for football match outcomes. The frontend was built with React to deliver a responsive and interactive user interface, while the backend uses Python with machine learning libraries such as Scikit-learn and XGBoost to analyze historical data and generate predictions. Pandas and NumPy were used for data preprocessing, and visualization libraries like Matplotlib and Seaborn helped in exploring performance patterns.",
     role: "Solo Developer",
     contributors: ["Solo Project"],
-    image: "/footballmatchpredictors.png",
-    technologies: ["React", "Tailwind CSS", "JavaScript", "Python"],
-    // liveUrl: "#",
+    image: "/FootballMatchPredictor.png",
+    technologies: ["React","Python", "JavaScript", "TypeScript", "Tailwind CSS"],
+    liveUrl: "https://footballmatchpredictor.vercel.app/",
     githubUrl: "https://github.com/Cenaaaaaa/ML---Football-Match-Predictor.git",
+    project_detail : "https://www.canva.com/design/DAG3oSjD91k/B5rehnJNMEkKC9tz_WU4XQ/edit?utm_content=DAG3oSjD91k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
   },
 ]
 
@@ -83,17 +73,11 @@ export function ProjectSection() {
           <div className="space-y-8">
             {/* First row - 3 projects */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {projects.slice(0, 3).map((project, index) => (
+              {projects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}
             </div>
 
-            {/* Second row - 1 project centered */}
-            <div className="flex justify-center">
-              <div className="w-full max-w-md lg:max-w-lg">
-                <ProjectCard project={projects[3]} />
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -108,7 +92,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         <Card className="group overflow-hidden border-border bg-card hover:bg-card/80 transition-all duration-300 hover:shadow-lg cursor-pointer">
           <div className="relative overflow-hidden">
             <Image
-              src={project.image || "/placeholder.svg"}
+              src={project.image}
               alt={project.title}
               width={400}
               height={300}
@@ -197,16 +181,22 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
           {/* Action Buttons */}
           <div className="flex gap-4 pt-4">
-            {/* <Button asChild className="flex-1">
+            <Button asChild className="flex-1">
               <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                Live Demo
+                <Play className="h-4 w-4 mr-2" />
+                App Demo
               </a>
-            </Button> */}
+            </Button>
             <Button variant="outline" asChild className="flex-1 bg-transparent">
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4 mr-2" />
                 Source Code
+              </a>
+            </Button>
+            <Button variant="outline" asChild className="flex-1 bg-transparent">
+              <a href={project.project_detail} target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="h-4 w-4 mr-2" />
+                Detail
               </a>
             </Button>
           </div>
