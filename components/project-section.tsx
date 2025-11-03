@@ -48,7 +48,7 @@ const projects = [
     fullDescription:
       "Developed in my fourth semester, Football Match Prediction combines web development and machine learning to provide predictions for football match outcomes. The frontend was built with React to deliver a responsive and interactive user interface, while the backend uses Python with machine learning libraries such as Scikit-learn and XGBoost to analyze historical data and generate predictions. Pandas and NumPy were used for data preprocessing, and visualization libraries like Matplotlib and Seaborn helped in exploring performance patterns.",
     role: "Solo Developer",
-    contributors: ["Solo Project"],
+    contributors: ["Jonathan Christian Souw, Richard Chrysander", "Gilbert Christian Putra Utama"],
     image: "/FootballMatchPredictor.png",
     technologies: ["React","Python", "JavaScript", "TypeScript", "Tailwind CSS"],
     liveUrl: "https://footballmatchpredictor.vercel.app/",
