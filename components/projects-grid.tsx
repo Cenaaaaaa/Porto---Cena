@@ -103,7 +103,7 @@ export default function ProjectsGrid() {
       <section id="work" className="py-24 px-6 bg-background">
         <div className="max-w-6xl mx-auto">
           <div className="mb-16">
-            <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">
+            <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4 mt-[-70px]">
               Featured Work
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">

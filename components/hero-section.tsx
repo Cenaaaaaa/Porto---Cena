@@ -41,24 +41,35 @@ export default function HeroSection() {
   }, [displayedText, isDeleting, currentRoleIndex, roles])
 
   return (
-    <section id="home" className="pt-32 pb-16 px-6 md:pt-40 animate-in fade-in slide-in-from-top-4 duration-700">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left side - Content */}
-          <div className="space-y-12">
-            {/* Header with small accent text */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
-                Jonathan Christian Souw <span className="text-primary typewriter-text">{displayedText}</span>
+    <section
+      id="home"
+      className="min-h-screen flex items-center px-6 pt-20 md:pt-24 animate-in fade-in slide-in-from-top-4 duration-700"
+    >
+      <div className="max-w-7xl mx-auto w-full">
+        <div className="grid md:grid-cols-2 gap-6 items-center">
+
+          {/* LEFT SIDE */}
+          <div className="space-y-6">
+
+            {/* NAME + ROLE */}
+            <div className="space-y-2">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
+                Jonathan Christian Souw
               </h1>
+
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary typewriter-text">
+                {displayedText}
+              </h2>
             </div>
-            {/* Description */}
-            <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-2xl font-medium mt-[-60px]">
-              As a Computer Science student in Intelligent Systems, I'm developing intelligent solutions using Machine Learning, Deep Learning, Natural Language Processing, and Computer Vision.
+
+            {/* DESCRIPTION */}
+            <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl font-medium">
+              As a Computer Science student in Intelligent Systems, I'm developing intelligent solutions
+              using Machine Learning, Deep Learning, Natural Language Processing, and Computer Vision.
             </p>
 
-            {/* Info Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8">
+            {/* INFO CARDS */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
               <div className="flex gap-4 items-start">
                 <div className="flex-shrink-0">
                   <div className="flex items-center justify-center h-10 w-10 rounded-lg bg-primary/10 text-primary">
@@ -84,10 +95,10 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Contact Info */}
-            <div className="flex flex-col md:flex-row gap-6 py-6 border-t border-b border-border">
+            {/* CONTACT LINKS */}
+            <div className="flex flex-col md:flex-row gap-6 py-3 border-t border-b border-border">
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <Mail className="w-5 h-5 text-primary" />
                 <a
                   href="mailto:jonathan.souw@binus.ac.id"
                   className="text-foreground/70 hover:text-primary transition-smooth text-sm"
@@ -95,47 +106,56 @@ export default function HeroSection() {
                   jonathan.souw@binus.ac.id
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Linkedin className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="https://www.linkedin.com/in/jonathan-christian-souw-67b045335/" className="text-foreground/70 hover:text-primary transition-smooth text-sm">
-                  Jonathan Christian Souw
 
+              <div className="flex items-center gap-3">
+                <Linkedin className="w-5 h-5 text-primary" />
+                <a
+                  href="https://www.linkedin.com/in/jonathan-christian-souw-67b045335/"
+                  className="text-foreground/70 hover:text-primary transition-smooth text-sm"
+                >
+                  Jonathan Christian Souw
                 </a>
               </div>
+
               <div className="flex items-center gap-3">
-                <Github className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="https://github.com/Cenaaaaaa" className="text-foreground/70 hover:text-primary transition-smooth text-sm">
+                <Github className="w-5 h-5 text-primary" />
+                <a
+                  href="https://github.com/Cenaaaaaa"
+                  className="text-foreground/70 hover:text-primary transition-smooth text-sm"
+                >
                   Cenaaaaaa
                 </a>
               </div>
             </div>
 
-            {/* CTA Buttons */}
+            {/* CTA BUTTONS */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#work"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-smooth font-semibold shadow-sm hover:shadow-md"
               >
-                <FolderGit className="mr-2 h-4 w-4" />My Project
+                <FolderGit className="mr-2 h-4 w-4" /> My Project
               </a>
+
               <a
                 href="https://drive.google.com/drive/folders/1onTgv-qQXuIo3wgkxaSL2NpYhK8tcHU2"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-smooth font-semibold shadow-sm hover:shadow-md"
               >
-                <Book className="mr-2 h-4 w-4" />Grade Transcript
+                <Book className="mr-2 h-4 w-4" /> Grade Transcript
               </a>
+
               <a
                 href="#contact"
                 className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-smooth font-semibold shadow-sm hover:shadow-md"
               >
-                <SquareUser className="mr-2 h-4 w-4" />Contact Me
+                <SquareUser className="mr-2 h-4 w-4" /> Contact Me
               </a>
             </div>
           </div>
 
-          {/* Right side - Profile Photo */}
-          <div className="hidden md:flex justify-center items-center mt-60">
-            <div className="relative w-96 h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+          {/* RIGHT SIDE – PHOTO */}
+          <div className="hidden md:flex justify-center items-center">
+            <div className="relative w-80 h-80 md:w-88 md:h-88 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
               <img
                 src="/Foto cena home.jpg"
                 alt="Your Name"
